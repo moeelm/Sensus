@@ -1,0 +1,5 @@
+env/
+__pycache__/
+.vscode/
+*__pycache__
+deep_learning/*.pyc
