@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Translate text with Azure Cognitive Services.">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Emotion Detection with AI</title>
+  </head>
+  <body>
+    <div class="container" style="padding: 2rem;">
+      <h1>Project Sensus</h1>
+      <p>This web app utilizes CNNs and an LSTM to detect whether a sentence is positive or negative</p>
+      <p> Created by senior design students at Stevens Institute of Technology
+      </p>
+      <div class="row">
+        <div class="col">
+        <form>
+            <!-- Enter text to translate. -->
+            <div class="form-group">
+              <label for="text-to-translate"><strong>Enter the text you'd like to analyze:</strong></label>
+              <textarea class="form-control" id="text-to-translate" rows="5"></textarea>
+            </div>
+            <!-- Select output language here. -->
+            <div class="form-group">
+              <label for="select-language"><strong>Detect:</strong></label>
+              <select class="form-control" id="select-language">
+                <option value="ar">Emotion</option>
+                <option value="ca">Option 2</option>
+                <option value="zh-Hans">Option 3</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2" id="translate" onclick="myFunction();">Magic</button></br>
+            <div id="detected-language" style="display: none">
+              <strong>Detected emotion:</strong> <span id="detected-language-result"></span><br />
+              <strong>Detection confidence:</strong> <span id="confidence"></span><br /><br />
+            </div>
+            
+          </form>
+          <!-- Translated text returned by the Translate API is rendered here. -->
+        </div>
+        <div class="col">
+          <form>
+            <div class="form-group" id="translator-text-response">
+              <label for="translation-result"><strong>Analyzed text:</strong></label>
+              <textarea readonly class="form-control" id="translation-result" rows="5"></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+	
+    <!-- Required JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type = "text/javascript" src ="main.js"></script>
+  </body>
+</html>
